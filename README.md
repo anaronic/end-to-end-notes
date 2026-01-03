@@ -110,14 +110,5 @@ Open `frontend/index.html` in browser or deploy via Vercel.
 * CORS enabled for hackathon/demo purposes
 * Uses free tiers (may have cold start delay)
 
----
-
-## 👤 Author
-
-Built by **Team Vanaras** for hackathon submission.
-
-````
-
----
 
 
