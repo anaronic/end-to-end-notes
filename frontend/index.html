@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>Notes App</h2>
+
+  <input id="note" placeholder="Write note" />
+  <button onclick="send()">Add</button>
+
+  <ul id="list"></ul>
+
+  <script>
+    const BACKEND = "https://your-backend.onrender.com";
+
+    async function send() {
+      const text = document.getElementById("note").value;
+      await fetch(BACKEND + "/add", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text })
+      });
+      load();
+    }
+
+    async function load() {
+      const res = await fetch(BACKEND + "/all");
+      const data = await res.json();
+      document.getElementById("list").innerHTML =
+        data.notes.map(n => `<li>${n}</li>`).join("");
+    }
+
+    load();
+  </script>
+</body>
+</html>
+
