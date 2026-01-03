@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Notebook Notes</title>
@@ -18,11 +19,13 @@
     .notebook {
       width: 420px;
       background: #fffef8;
-      padding: 30px 25px 40px;
+      padding: 30px 25px 40px 75px;
+      /* 👈 left padding increased */
       border-radius: 6px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
       position: relative;
     }
+
 
     /* red margin line */
     .notebook::before {
@@ -81,11 +84,13 @@
     }
 
     li {
-      padding: 6px 0 6px 40px;
+      padding: 6px 0 6px 0;
+      /* remove left padding */
       border-bottom: 1px solid #ddd;
       line-height: 1.6;
       position: relative;
     }
+
 
     /* notebook lines */
     li::before {
@@ -95,7 +100,7 @@
       right: 0;
       bottom: 0;
       height: 1px;
-      background: rgba(0,0,0,0.05);
+      background: rgba(0, 0, 0, 0.05);
     }
   </style>
 </head>
@@ -137,4 +142,5 @@
     load();
   </script>
 </body>
+
 </html>
