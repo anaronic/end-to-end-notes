@@ -120,9 +120,4 @@ Built by **Team Vanaras** for hackathon submission.
 
 ---
 
-## ✅ What to do now
-```bash
-git add README.md
-git commit -m "add README"
-git push
-````
+
